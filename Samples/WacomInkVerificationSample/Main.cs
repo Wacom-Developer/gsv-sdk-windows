@@ -21,14 +21,20 @@ namespace WacomVerificationSample
         #region Fields
         
         private object mSignature = null;  // SigObj or filename
-        private const string mLicense = "AgBPAO+RyjSiAQVXYWNvbRJTaWduYXR1cmUgVmVyaWZpZXIDAAgBAwAFgQICExIPU2lnbmF0dXJlVmVyaWZ5tAEEgQICExAPU2lnbmF0dXJlVmVyaWZ5";
-
+        private readonly string mLicense;
+        
         #endregion
 
         #region Constructor
         public Main()
         {
             InitializeComponent();
+
+            // Load license string
+            // Note: The license supplied with this sample is for evaluation purposes and will expire 6 months 
+            //       after the installation of the SDK components. 
+            //       Please contact Wacom to obtain a full production license for use in your own code.
+            mLicense = File.ReadAllText("SampleLicense.txt").Trim();
 
             /// Load saved templates
             if (Directory.Exists(Options.Instance.TemplateFolder))

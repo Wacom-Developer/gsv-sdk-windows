@@ -69,7 +69,7 @@ The Verification SDK includes the following:
 
 | Name                      | Description |
 | ------------------------- | ----------- |
-| SignatureEngine Component | The core verification functionality is provided in the form of a WPF COM component. The component is secured using a conventional machine license |
+| SignatureEngine Component | The core verification functionality is provided in the form of a COM component. The component is secured using a machine specific license |
 | Documentation             | The SDK is supplied with a detailed doxygen API reference |
 | Installer                 | An MSI installer is provided to install and register the SDK COM components. A licenser app is also included to report the machine identifier and install the machine license key |
 

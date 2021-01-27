@@ -96,9 +96,9 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 
 | Type   | Name             | Description |
 | ----   | -----------      | ----------- |
-| UINT   | templateSize     | Number of signatures needed for enrollment.<br/>Min = 3, Max = 12, Default = 6 |
-| FLOAT  | enrollmentScore  | The minimum score needed to define a consistent set of signatures.<br/>Default = 0.2 |
-| UINT   | updateInterval   | The minimum number of days that must elapse before enrolled templates can be updated.<br/>Default = 30 days |
+| UINT   | TemplateSize     | Number of signatures needed for enrollment.<br/>Min = 3, Max = 12, Default = 6 |
+| FLOAT  | EnrollmentScore  | The minimum score needed to define a consistent set of signatures.<br/>Default = 0.2 |
+| UINT   | UpdateInterval   | The minimum number of days that must elapse before enrolled templates can be updated.<br/>Default = 30 days |
 
 **Data: ImageOptions**
 
@@ -108,15 +108,15 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 
 | Type   | Name               | Description |
 | ----   | -----------        | ----------- |
-| BOOL   | removeSpeckle      | Remove small dots produced by poor scanning or low quality paper<br/>Default: FALSE |
-| BOOL   | removeFold         | Remove straight lines resulting from folds in the scanned paper<br/>Default: FALSE |
-| BOOL   | removeBox          | Remove the rectangular box defining the signature area<br/>Default: FALSE |
-| BOOL   | removeSigningLine  | Remove the printed signature line.<br/>Default: FALSE |
-| FLOAT  | minSigningLineLength | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines shorter than the given length in millimetres.<br/>Default: 0 |
-| FLOAT  | maxSigningLineThickness   | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines that are thicker than the specified width in millimetres.<br/>Default: 0 |
-| BOOL   | adjustContrast     | Adjust the image contrast before extracting signature ink.<br/>Default: FALSE |
+| BOOL   | RemoveSpeckle      | Remove small dots produced by poor scanning or low quality paper<br/>Default: FALSE |
+| BOOL   | RemoveFold         | Remove straight lines resulting from folds in the scanned paper<br/>Default: FALSE |
+| BOOL   | RemoveBox          | Remove the rectangular box defining the signature area<br/>Default: FALSE |
+| BOOL   | RemoveSigningLine  | Remove the printed signature line.<br/>Default: FALSE |
+| FLOAT  | MinSigningLineLength | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines shorter than the given length in millimetres.<br/>Default: 0 |
+| FLOAT  | MaxSigningLineThickness   | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines that are thicker than the specified width in millimetres.<br/>Default: 0 |
+| BOOL   | AdjustContrast     | Adjust the image contrast before extracting signature ink.<br/>Default: FALSE |
 | INT    | Contrast           | Only applies when *adjustContrast* is TRUE. Sets the contrast adjustment to be applied.<br/>Default: 0, Min: -100, Max: 100 |
-| BOOL   | setImageResolution | The image resolution should normally be defined in the image metadata. However, some scanners fail to set the correct value and this option forces the correct value to be used.<br/>Default: FALSE |
+| BOOL   | SetImageResolution | The image resolution should normally be defined in the image metadata. However, some scanners fail to set the correct value and this option forces the correct value to be used.<br/>Default: FALSE |
 | UINT   | ImageResolution    |  The image resolution to be used when *setImageResolution* is TRUE |
 
 **Data: State**
@@ -130,25 +130,25 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 |        | Enrolled    | Sufficient consistent signatures have been verified and the template is enrolled |
 |        | Updated     | Fully enrolled and last signature verified was used to update the reference data |
 
-**Data: EnrolmentStatus**
+**Data: EnrollmentStatus**
 
 *Note that the NumSignatures could be equal to the number of signatures required for enrollment while the **State** is still **Enrolling**. This can occur if an excessively inconsistent set of reference signatures are enrolled.*
 
-| Type   | Name           | Description |
-| ----   | -----------    | ----------- |
-| State  | EnrolmentState |  Condition of enrollment for this type of signature |
-| UINT   | NumSignatures  | Current number of signatures stored |
-| UINT   | EnrolmentSize  | Number of consistent signatures needed for enrollment|
+| Type   | Name            | Description |
+| ----   | -----------     | ----------- |
+| State  | EnrollmentState |  Condition of enrollment for this type of signature |
+| UINT   | NumSignatures   | Current number of signatures stored |
+| UINT   | EnrollmentSize  | Number of consistent signatures needed for enrollment|
 
 **Data: TemplateStatus**
 
 *The mixed data consists of comparisons between dynamic and static types of data.*
 *This is only needed transitionally and will never reach full enrollment so is not reported here*
 
-| Type             | Name          | Description |
-| ----             | -----------   | ----------- |
-| EnrolmentStatus  | DynamicStatus | Current state of the dynamic reference data |
-| EnrolmentStatus  | StaticStatus  | Current state of the static reference data |
+| Type              | Name          | Description |
+| ----              | -----------   | ----------- |
+| EnrollmentStatus  | DynamicStatus | Current state of the dynamic reference data |
+| EnrollmentStatus  | StaticStatus  | Current state of the static reference data |
 
 **Data: ComparisonType**
 
@@ -181,11 +181,11 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 | ----              | -----------      | ----------- |
 | FLOAT             | Score            | The comparison score, a value between 0 (inconsistent) and 1 (consistent) |
 | ComparisonType    | Engine           | The type of comparison engine used |
-| InconsistencyType |  Inconsistency   | The main type of difference found |
+| InconsistencyType | Inconsistency    | The main type of difference found |
 | TemplateStatus    | State            | The enrollment status for each type of signature |
 | FLOAT             | Complexity       | Indicates the complexity of the last signature verified. The value lies in the range 0 (trivially simple) to 1 (very long and with many features).<br/>This only applies to dynamic signatures; images always have a complexity of 0 |
 | FLOAT             | MixedScore       | The verification score comparing the static and dynamic data when both types are being handled |
-| String            |  UpdatedTemplate |   Updated template data as base-64 encoded text |
+| String            | UpdatedTemplate  | Updated template data as base-64 encoded text |
 
 
 ### SignatureEngine Component

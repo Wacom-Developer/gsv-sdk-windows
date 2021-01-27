@@ -112,12 +112,12 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 | BOOL   | RemoveFold         | Remove straight lines resulting from folds in the scanned paper<br/>Default: FALSE |
 | BOOL   | RemoveBox          | Remove the rectangular box defining the signature area<br/>Default: FALSE |
 | BOOL   | RemoveSigningLine  | Remove the printed signature line.<br/>Default: FALSE |
-| FLOAT  | MinSigningLineLength | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines shorter than the given length in millimetres.<br/>Default: 0 |
-| FLOAT  | MaxSigningLineThickness   | Only applies when *removeSigningLine* is TRUE. Forces the line removal to ignore lines that are thicker than the specified width in millimetres.<br/>Default: 0 |
+| FLOAT  | MinSigningLineLength | Only applies when *RemoveSigningLine* is TRUE. Forces the line removal to ignore lines shorter than the given length in millimetres.<br/>Default: 0 |
+| FLOAT  | MaxSigningLineThickness   | Only applies when *RemoveSigningLine* is TRUE. Forces the line removal to ignore lines that are thicker than the specified width in millimetres.<br/>Default: 0 |
 | BOOL   | AdjustContrast     | Adjust the image contrast before extracting signature ink.<br/>Default: FALSE |
-| INT    | Contrast           | Only applies when *adjustContrast* is TRUE. Sets the contrast adjustment to be applied.<br/>Default: 0, Min: -100, Max: 100 |
+| INT    | Contrast           | Only applies when *AdjustContrast* is TRUE. Sets the contrast adjustment to be applied.<br/>Default: 0, Min: -100, Max: 100 |
 | BOOL   | SetImageResolution | The image resolution should normally be defined in the image metadata. However, some scanners fail to set the correct value and this option forces the correct value to be used.<br/>Default: FALSE |
-| UINT   | ImageResolution    |  The image resolution to be used when *setImageResolution* is TRUE |
+| UINT   | ImageResolution    |  The image resolution to be used when *SetImageResolution* is TRUE |
 
 **Data: State**
 

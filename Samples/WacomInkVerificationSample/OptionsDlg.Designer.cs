@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxSigStyle = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkForceEnroll = new System.Windows.Forms.CheckBox();
             this.chkIgnoreDateTime = new System.Windows.Forms.CheckBox();
@@ -73,6 +75,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxSigStyle);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.numUpdateInterval);
             this.groupBox1.Controls.Add(this.label3);
@@ -82,10 +86,27 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 70);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(304, 108);
+            this.groupBox1.Size = new System.Drawing.Size(304, 131);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuration";
+            // 
+            // cbxSigStyle
+            // 
+            this.cbxSigStyle.FormattingEnabled = true;
+            this.cbxSigStyle.Location = new System.Drawing.Point(102, 100);
+            this.cbxSigStyle.Name = "cbxSigStyle";
+            this.cbxSigStyle.Size = new System.Drawing.Size(61, 21);
+            this.cbxSigStyle.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Signature Style:";
             // 
             // groupBox2
             // 
@@ -103,7 +124,7 @@
             this.chkForceEnroll.AutoSize = true;
             this.chkForceEnroll.Location = new System.Drawing.Point(13, 42);
             this.chkForceEnroll.Name = "chkForceEnroll";
-            this.chkForceEnroll.Size = new System.Drawing.Size(102, 17);
+            this.chkForceEnroll.Size = new System.Drawing.Size(104, 17);
             this.chkForceEnroll.TabIndex = 1;
             this.chkForceEnroll.Text = "Force enrollment";
             this.chkForceEnroll.UseVisualStyleBackColor = true;
@@ -132,7 +153,7 @@
             0,
             0});
             this.numUpdateInterval.Name = "numUpdateInterval";
-            this.numUpdateInterval.Size = new System.Drawing.Size(50, 20);
+            this.numUpdateInterval.Size = new System.Drawing.Size(61, 20);
             this.numUpdateInterval.TabIndex = 6;
             this.numUpdateInterval.Value = new decimal(new int[] {
             30,
@@ -164,7 +185,7 @@
             0,
             0});
             this.numEnrollScore.Name = "numEnrollScore";
-            this.numEnrollScore.Size = new System.Drawing.Size(50, 20);
+            this.numEnrollScore.Size = new System.Drawing.Size(61, 20);
             this.numEnrollScore.TabIndex = 4;
             this.numEnrollScore.Value = new decimal(new int[] {
             2,
@@ -195,7 +216,7 @@
             0,
             0});
             this.numTemplateSize.Name = "numTemplateSize";
-            this.numTemplateSize.Size = new System.Drawing.Size(50, 20);
+            this.numTemplateSize.Size = new System.Drawing.Size(61, 20);
             this.numTemplateSize.TabIndex = 2;
             this.numTemplateSize.Value = new decimal(new int[] {
             6,
@@ -228,7 +249,7 @@
             this.groupBox3.Controls.Add(this.chkRemoveBox);
             this.groupBox3.Controls.Add(this.chkRemoveFold);
             this.groupBox3.Controls.Add(this.chkRemoveSpeckle);
-            this.groupBox3.Location = new System.Drawing.Point(12, 185);
+            this.groupBox3.Location = new System.Drawing.Point(13, 207);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(304, 196);
             this.groupBox3.TabIndex = 1;
@@ -436,7 +457,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(413, 389);
+            this.ClientSize = new System.Drawing.Size(413, 411);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.groupBox4);
@@ -499,5 +520,7 @@
         private System.Windows.Forms.TextBox txtFolder;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbxSigStyle;
+        private System.Windows.Forms.Label label8;
     }
 }

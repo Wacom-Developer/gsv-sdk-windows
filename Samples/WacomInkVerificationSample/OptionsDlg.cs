@@ -3,6 +3,7 @@
  *  Copyright © 2020 Wacom Co.,Ltd.
  */
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace WacomVerificationSample
 {
     public partial class OptionsDlg : Form
     {
+
         /// <summary>
         /// User interface for setting application options
         /// </summary>
@@ -24,6 +26,18 @@ namespace WacomVerificationSample
             numTemplateSize.Value = options.ConfigurationOptions.TemplateSize;
             numEnrollScore.Value = (decimal)options.ConfigurationOptions.EnrollmentScore;
             numUpdateInterval.Value = options.ConfigurationOptions.UpdateInterval;
+
+            var sigStyles = new Dictionary<string, WacomVerification.SignatureStyle>()
+            {
+                { "Cursive", WacomVerification.SignatureStyle.Cursive },
+                { "Kanji"  , WacomVerification.SignatureStyle.Kanji }
+            };
+
+            cbxSigStyle.DataSource = new BindingSource(sigStyles, null);
+            cbxSigStyle.DisplayMember = "Key";
+            cbxSigStyle.ValueMember = "Value";
+            cbxSigStyle.SelectedValue = options.ConfigurationOptions.SignatureStyle;
+
             chkIgnoreDateTime.Checked = options.ConfigurationOptions.IgnoreDateTime;
             chkForceEnroll.Checked = options.ConfigurationOptions.ForceEnrollment;
 
@@ -65,6 +79,7 @@ namespace WacomVerificationSample
             options.ConfigurationOptions.TemplateSize = (ushort)numTemplateSize.Value;
             options.ConfigurationOptions.EnrollmentScore = (float)numEnrollScore.Value;
             options.ConfigurationOptions.UpdateInterval = (ushort)numUpdateInterval.Value;
+            options.ConfigurationOptions.SignatureStyle = (WacomVerification.SignatureStyle)cbxSigStyle.SelectedValue;
             options.ConfigurationOptions.IgnoreDateTime = chkIgnoreDateTime.Checked;
             options.ConfigurationOptions.ForceEnrollment = chkForceEnroll.Checked;
 

@@ -99,6 +99,16 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 | UINT   | TemplateSize     | Number of signatures needed for enrollment.<br/>Min = 3, Max = 12, Default = 6 |
 | FLOAT  | EnrollmentScore  | The minimum score needed to define a consistent set of signatures.<br/>Default = 0.2 |
 | UINT   | UpdateInterval   | The minimum number of days that must elapse before enrolled templates can be updated.<br/>Default = 30 days |
+| enum   | SignatureStyle   | Sets the classifier to type of signatures expected<br/>Options: **Cursive**, **Kanji**, **Auto** (Auto not currently implemented in the engine)<br/>Default: Cursive |
+
+*The following options are provided for test purposes and should not be used in production systems:*
+
+| Type   | Name             | Description |
+| ----   | -----------      | ----------- |
+| BOOL   | IgnoreDateTime   | Instructs the system to ignore the data and time reported for each signature.<br/>Default = FALSE |
+| BOOL   | ForceEnrollment  | Forces the system to complete the enrollment when the required number of signatures has been received, ignoring any inconsistencies.<br/>Default = FALSE |
+
+
 
 **Data: ImageOptions**
 

@@ -4,6 +4,10 @@
 
 ## History
 
+### 1.0.4   08 March 2021
+  *	option added for classifier to optimize for Kanji signatures
+  * improved enrollment procedure
+
 ### 1.0.3   17 February 2021
   * Enhancements
 

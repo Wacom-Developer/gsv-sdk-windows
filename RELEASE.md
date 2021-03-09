@@ -1,6 +1,6 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.3
+## Version 1.0.4
 
 ## History
 

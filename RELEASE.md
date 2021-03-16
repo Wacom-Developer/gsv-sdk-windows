@@ -1,8 +1,11 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.4
+## Version 1.0.5
 
 ## History
+
+### 1.0.5   16 March 2021
+  *	improvements to the classifier
 
 ### 1.0.4   08 March 2021
   *	option added for classifier to optimize for Kanji signatures

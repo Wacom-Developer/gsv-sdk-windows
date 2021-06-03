@@ -37,6 +37,9 @@
             this.lblVersion = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblComponentVer = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLicensed = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +77,7 @@
             // 
             this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(136, 147);
+            this.btnOK.Location = new System.Drawing.Point(136, 155);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 4;
@@ -83,7 +86,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(49, 89);
+            this.label4.Location = new System.Drawing.Point(49, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 16);
             this.label4.TabIndex = 5;
@@ -92,7 +95,7 @@
             // 
             // lblVersion
             // 
-            this.lblVersion.Location = new System.Drawing.Point(174, 89);
+            this.lblVersion.Location = new System.Drawing.Point(174, 92);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(125, 16);
             this.lblVersion.TabIndex = 6;
@@ -101,7 +104,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(49, 120);
+            this.label5.Location = new System.Drawing.Point(49, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 16);
             this.label5.TabIndex = 7;
@@ -110,12 +113,39 @@
             // 
             // lblComponentVer
             // 
-            this.lblComponentVer.Location = new System.Drawing.Point(174, 120);
+            this.lblComponentVer.Location = new System.Drawing.Point(174, 109);
             this.lblComponentVer.Name = "lblComponentVer";
             this.lblComponentVer.Size = new System.Drawing.Size(125, 16);
             this.lblComponentVer.TabIndex = 8;
             this.lblComponentVer.Text = "vX.X";
             this.lblComponentVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(49, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Licensed";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLicensed
+            // 
+            this.lblLicensed.Location = new System.Drawing.Point(174, 125);
+            this.lblLicensed.Name = "lblLicensed";
+            this.lblLicensed.Size = new System.Drawing.Size(125, 16);
+            this.lblLicensed.TabIndex = 10;
+            this.lblLicensed.Text = "yes/no";
+            this.lblLicensed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(88, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 19);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Copyright © 2020-21 Wacom Co., Ltd.";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AboutDlg
             // 
@@ -123,7 +153,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnOK;
-            this.ClientSize = new System.Drawing.Size(347, 182);
+            this.ClientSize = new System.Drawing.Size(347, 190);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblLicensed);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblComponentVer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblVersion);
@@ -155,5 +188,8 @@
     private System.Windows.Forms.Label lblVersion;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label lblComponentVer;
-  }
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLicensed;
+        private System.Windows.Forms.Label label6;
+    }
 }

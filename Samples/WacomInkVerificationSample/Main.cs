@@ -21,7 +21,7 @@ namespace WacomVerificationSample
         #region Fields
         
         private object mSignature = null;  // SigObj or filename
-        private readonly string mLicense;
+        private const string mLicense = "<<insert license here>>";
         
         #endregion
 
@@ -29,12 +29,6 @@ namespace WacomVerificationSample
         public Main()
         {
             InitializeComponent();
-
-            // Load license string
-            // Note: The license supplied with this sample is for evaluation purposes and will expire 6 months 
-            //       after the installation of the SDK components. 
-            //       Please contact Wacom to obtain a full production license for use in your own code.
-            mLicense = File.ReadAllText("SampleLicense.txt").Trim();
 
             /// Load saved templates
             if (Directory.Exists(Options.Instance.TemplateFolder))
@@ -55,7 +49,7 @@ namespace WacomVerificationSample
         /// </summary>
         private void OnAboutClick(object sender, EventArgs e)
         {
-            AboutDlg aboutBox = new AboutDlg();
+            AboutDlg aboutBox = new AboutDlg(IsLicensed);
             aboutBox.ShowDialog(this);
         }
 
@@ -158,25 +152,34 @@ namespace WacomVerificationSample
         /// <remarks>Uses components from the Wacom Signaure SDK</remarks>
         private void OnCaptureClick(object sender, EventArgs e)
         {
-            ClearSignature();
-
-            var capture = new DynamicCaptureClass();
-            var sigCtl = new SigCtlClass();
-
-            capture.Licence = mLicense;
-            var captResult = capture.Capture(sigCtl, Environment.UserName, "Verification test");
-            if (captResult == DynamicCaptureResult.DynCaptOK)
+            if (!CheckLicense())
+                return;
+            try
             {
-                ISigObj4 sigObj = sigCtl.Signature as ISigObj4;
+                ClearSignature();
 
-                SetSignature(sigObj);
+                var capture = new DynamicCaptureClass();
+                var sigCtl = new SigCtlClass();
+
+                capture.Licence = mLicense;
+                var captResult = capture.Capture(sigCtl, Environment.UserName, "Verification test");
+                if (captResult == DynamicCaptureResult.DynCaptOK)
+                {
+                    ISigObj4 sigObj = sigCtl.Signature as ISigObj4;
+
+                    SetSignature(sigObj);
+                }
+                else if (captResult != DynamicCaptureResult.DynCaptCancel)
+                {
+                    MessageBox.Show($"Capture failed.\nError: {captResult}", "Capture Signature",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                CheckButtonsEnabled();
             }
-            else if (captResult != DynamicCaptureResult.DynCaptCancel)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Capture failed.\nError: {captResult}", "Capture Signature", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"Exception: {ex.Message}", null, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            CheckButtonsEnabled();
         }
 
         /// <summary>
@@ -318,27 +321,28 @@ namespace WacomVerificationSample
         /// </summary>
         private void VerifySignature()
         {
-            if (mSignature != null && lstTemplates.SelectedIndex >= 0)
-            {
-                var sigEngine = new SignatureEngine();
-                var template = (Template)lstTemplates.SelectedItem;
-                sigEngine.License = mLicense;
+            if (!CheckLicense())
+                return;
 
-                if (sigEngine.IsLicensed)
+            try
+            {
+                if (mSignature != null && lstTemplates.SelectedIndex >= 0)
                 {
+                    var sigEngine = new SignatureEngine();
+                    var template = (Template)lstTemplates.SelectedItem;
+                    sigEngine.License = mLicense;
+
                     var result = sigEngine.VerifySignature(template.Data, mSignature);
                     template.Data = result.UpdatedTemplate;
 
                     var resultsDlg = new ResultsDlg(result);
                     resultsDlg.ShowDialog(this);
                 }
-                else
-                {
-                    MessageBox.Show("SignatureEngine is not licensed on this machine.\n" +
-                                    "Please run the Licensing application.",
-                                    "Licensing",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception: {ex.Message}", null, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -430,6 +434,25 @@ namespace WacomVerificationSample
         #region Support Methods
 
         /// <summary>
+        /// True if license string (mLicense) is valid
+        /// </summary>
+        /// <remarks>Does not check for license expired or whether it allows verification</remarks>
+        private static bool IsLicensed
+        {
+            get
+            {
+                var license = new WacomLicenceLib.LicenceClass();
+
+                if (license.SetLicence(mLicense).Result == 0)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+        }
+
+        /// <summary>
         /// Resets signarture and image
         /// </summary>
         private void ClearSignature()
@@ -450,6 +473,23 @@ namespace WacomVerificationSample
             btnDelete.Enabled = tpltSelected;
 
             btnVerify.Enabled = haveSig && tpltSelected;
+        }
+
+        /// <summary>
+        /// Checks if appp is licensed; displays error message if not
+        /// </summary>
+        private bool CheckLicense()
+        {
+            if (!IsLicensed)
+            {
+                MessageBox.Show("Use of this sample application requires a valid, current license string from Wacom",
+                                null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         #endregion

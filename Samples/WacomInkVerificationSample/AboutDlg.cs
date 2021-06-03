@@ -16,7 +16,7 @@ namespace WacomVerificationSample
     /// </summary>
     public partial class AboutDlg : Form
     {
-        public AboutDlg()
+        public AboutDlg(bool isLicensed)
         {
             InitializeComponent();
 
@@ -26,6 +26,7 @@ namespace WacomVerificationSample
             SignatureEngine sigEngine = new SignatureEngine();
 
             lblComponentVer.Text = sigEngine.GetProperty("Component_FileVersion").ToString();
+            lblLicensed.Text = isLicensed ? "Yes" : "No";
         }
     }
 }

@@ -58,7 +58,7 @@ namespace WacomVerificationSample
         /// <param name="name">Name of template</param>
         public Template(string name)
         {
-            Name = name;
+            Name = (Path.GetExtension(name) == Extn || name.EndsWith(".")) ? Path.GetFileNameWithoutExtension(name) : name;
             Reset();
         }
 
@@ -164,7 +164,7 @@ namespace WacomVerificationSample
         /// <returns></returns>
         private string FileName()
         {
-            return Path.ChangeExtension(Path.Combine(Options.Instance.TemplateFolder, Name), Extn);
+            return Path.Combine(Options.Instance.TemplateFolder, Name) + Extn;
         }
 
         #endregion

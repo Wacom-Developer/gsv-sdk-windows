@@ -10,26 +10,22 @@ The sample application is supplied for Windows 7 and above to demonstrate using 
 Run the MSI installer included in the SDK folder to install the necessary Wacom signature and Verification components.
 
 ## License the application
-A license is required to run the Verification application.  
-The license is unique to the machine running the SDK and requires use of the Licenser application found in the Windows Start menu:
+A license is required to run the Verification application.    
+A custom user license is supplied separately via email from *signature-support@wacom.com*
 
+The license is supplied as a JWT text string and must be included in the application.
+In the Verification sample code insert the string in the file main.cs:
 ```
-Start..License Signature Verification
+private const string mLicense = "<<insert license here>>";
 ```
 
-The Licenser displays a dialog:
-
-![Licenser](media/Licenser.png)
-
-A request code will be displayed in the dialog.  
-Use the Copy button and email the code with subject **Wacom Ink Verification Beta - Authorisation code** to:  
- *signature-support@wacom.com*
-
-You will then be emailed an authorisation code to paste into the dialog, for example:
+The license is subsequently used to license both signature capture and the verification engine:
 ```
-Request code:       AgEZMFgfYAQXBgAMKbDlBA9TaWduYXR1cmVWZXJpZnk
-Authorization code: AgEji3UNEgQhD1NpZ25hdHVyZVZlcmlmeRBrm9/PHfIfgIODLHOWA+O3
-```
+  capture.Licence = mLicense;
+  
+  sigEngine.License = mLicense;
+``` 
+
 
 ----
 ## Sample Code
@@ -46,6 +42,10 @@ The following steps describe how to build and run the application:
 The application displays its main dialog:
 
 ![Sample App](media/SampleApp.png)
+
+Check that the application has been successfully licensed using *Help...About*  
+In addition to version information the dialog should report *Licensed Yes*
+
 
 To use the application follow the steps:
 
@@ -98,7 +98,7 @@ The API is documented in the set of doxygen files.
 
 #### License
 
-A license must be configured to use the application.
+A suitable JWT license must be included in the application.
 
 #### Threads
 

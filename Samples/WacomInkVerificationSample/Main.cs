@@ -436,7 +436,10 @@ namespace WacomVerificationSample
         /// <summary>
         /// True if license string (mLicense) is valid
         /// </summary>
-        /// <remarks>Does not check for license expired or whether it allows verification</remarks>
+        /// <remarks>
+        /// Only checks if the license string is valid. 
+        /// Does not check for license expired or whether it allows verification
+        /// </remarks>
         private static bool IsLicensed
         {
             get

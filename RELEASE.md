@@ -1,11 +1,11 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.5
+## Version 1.0.6
 
 ## History
 
-### 1.0.5   04 June 2021
-  *	revised licensing - non machine dependent
+### 1.0.6   15 June 2021
+  *	revised licensing - now non machine dependent
   
 ### 1.0.5   16 March 2021
   *	improvements to the classifier

@@ -3,11 +3,12 @@
 ## Development Environment
 
 The sample application is supplied for Windows 7 and above to demonstrate using the SDK.
+Microsoft Visual Studio 2019 is required to build the application.
 
 
 ## Install the SDK
 
-Run the MSI installer included in the SDK folder to install the necessary Wacom signature and Verification components.
+Run the MSI installer included in the SDK folder to install the necessary Wacom signature and Verification components. Choose the -x86 or -x64 installer for 32-bit or 64-bit operation respectively.
 
 ## License the application
 A license is required to run the Verification application.    
@@ -36,7 +37,8 @@ The following steps describe how to build and run the application:
 
 * Ensure that .NET Framework 4.7.2 is installed for a successful build.
 * Open the sample solution **WacomInkVerificationSample.sln** in Visual Studio 2019.
-* set the project to build as **x86**
+* set the project to build as **x86** if the -x86 SDK was installed
+* set the project to build as **x64** if the -x64 SDK was installed
 * build and run the application
 
 The application displays its main dialog:
@@ -99,6 +101,7 @@ The API is documented in the set of doxygen files.
 #### License
 
 A suitable JWT license must be included in the application.
+A suitable capture device must be connected to use the application and validate the license (e.g. STU-430).
 
 #### Threads
 

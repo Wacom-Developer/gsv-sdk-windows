@@ -12,7 +12,8 @@ Run the MSI installer included in the SDK folder to install the necessary Wacom 
 
 ## License the application
 A license is required to run the Verification application.    
-A custom user license is supplied separately via email from *signature-support@wacom.com*
+A custom user license is supplied separately via email from *signature-support@wacom.eu* upon receipt of your Wacom ID.
+To obtain a Wacom ID please register at https://developer.wacom.com - your Wacom ID is the email address which you use for the registration.
 
 The license is supplied as a JWT text string and must be included in the application.
 In the Verification sample code insert the string in the file main.cs:

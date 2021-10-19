@@ -1,14 +1,22 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.6
+## Version 1.0.8
 
 ## History
 
+### 1.0.8   19 October 2021
+  * Improved the classifier to give better results for short signatures
+
+### 1.0.7   08 July 2021
+  * Production release
+  * Improved the processing of input data to give greater flexibility of signature types. 
+    Now handles FSS (binary and base64-encoded text), ISO 19794, static images and FSS data stored steganographically within static images
+  
 ### 1.0.6   15 June 2021
-  *	revised licensing - now non machine dependent
+  *	revised licensing to use a JWT text string - now non machine dependent
   
 ### 1.0.5   16 March 2021
-  *	improvements to the classifier
+  *	improvements to the classifier to give better accuracy
 
 ### 1.0.4   08 March 2021
   *	option added for classifier to optimize for Kanji signatures

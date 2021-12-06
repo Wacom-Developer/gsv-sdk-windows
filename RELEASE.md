@@ -1,8 +1,11 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.8
+## Version 1.0.9
 
 ## History
+
+### 1.0.9   8 December 2021
+  * Initial release. 
 
 ### 1.0.8   19 October 2021
   * Improved the classifier to give better results for short signatures

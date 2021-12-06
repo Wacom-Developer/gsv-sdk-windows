@@ -8,26 +8,36 @@ Microsoft Visual Studio 2019 is required to build the application.
 
 ## Install the SDK
 
-Run the MSI installer included in the SDK folder to install the necessary Wacom signature and Verification components. Choose the -x86 or -x64 installer for 32-bit or 64-bit operation respectively.
+Run the MSI installer included in the SDK folder to install the necessary Wacom signature and
+Verification components. Choose the -x86 or -x64 installer for 32-bit or 64-bit operation
+respectively.
 
 ## License the application
-A license is required to run the Verification application.    
-A custom user license is supplied separately via email from *signature-support@wacom.eu* upon receipt of your Wacom ID.
-To obtain a Wacom ID please register at https://developer.wacom.com - your Wacom ID is the email address which you use for the registration.
+A license is required to run the Verification application.
 
-The license is supplied as a JWT text string and must be included in the application.
-In the Verification sample code insert the string in the file main.cs:
+A custom user license is supplied separately via email from *signature-support@wacom.eu* upon receipt of your Wacom ID.
+To obtain a Wacom ID please register at https://developer.wacom.com. Your Wacom ID is the email address which you use for the registration.
+
+The license is supplied as a JWT text string and must be included in the application. In the
+Verification sample code insert the string in the file main.cs:
+
 ```
 private const string mLicense = "<<insert license here>>";
 ```
 
 The license is subsequently used to license both signature capture and the verification engine:
-```
-  capture.Licence = mLicense;
-  
-  sigEngine.License = mLicense;
-``` 
 
+```
+capture.Licence = mLicense;
+
+sigEngine.License = mLicense;
+```
+
+An evaluation license is also available here:
+
+```eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiMzNhYWUyODA0NmM0MmE5OTgyY2E1NTdkZjhmY2YxOCIsImV4cCI6MTY0NTMxNTE5OSwiaWF0IjoxNjM4NzgzODg0LCJzZWF0cyI6MCwicmlnaHRzIjpbIkdTVl9TREtfQ09SRSIsIlNJR19TREtfQ09SRSJdLCJkZXZpY2VzIjpbIldBQ09NX0FOWSJdLCJ0eXBlIjoiZXZhbCIsImxpY19uYW1lIjoiR1NWIFNESyBFdmFsdWF0aW9uIGxpY2Vuc2UiLCJ3YWNvbV9pZCI6ImIzM2FhZTI4MDQ2YzQyYTk5ODJjYTU1N2RmOGZjZjE4IiwibGljX3VpZCI6ImU1NmU4ZmJlLTQxYzctNGEyMy1hZDhhLTE2MjdjMjljMDI2NiIsImFwcHNfd2luZG93cyI6W10sImFwcHNfaW9zIjpbXSwiYXBwc19hbmRyb2lkIjpbXSwibWFjaGluZV9pZHMiOltdfQ.eyjOSDtTPuEZFGr1Gv0-hhOcmmdugRfdGFzAve-Z1sUGdraujzxd8OatAWkQ1d9WnOQ7RWp5h-6ydypSLOyqxStsZqP_nc3LGRDxhKnA8SDHt8cZ8qKRFJJWW85myq2BbLA0ZZip2FGdP4Suu02076ZzB9xzioNT2BJALLpsB1DVn-KNgsagiuuYwmyKVW-eKLrkkZfVf4DSe3U4xSbuxFiOVY5XtmpBF6fyKWAXfVbWMKBmwYQIcNRDcR_88m7ssYGBfF1vyw8IoBZrpUbSirmjg5i0KSdvGm-nCUAlEhmr11XIQ89MLK5R_unv17tfEwAxjta4dT2yR05Uy6XVNQ```  
+
+ NB: this particular license is only valid for a limited time. 
 
 ----
 ## Sample Code
@@ -46,9 +56,9 @@ The application displays its main dialog:
 
 ![Sample App](media/SampleApp.png)
 
-Check that the application has been successfully licensed using *Help...About*  
-In addition to version information the dialog should report *Licensed Yes*
+Check that the application has been successfully licensed using *Help...About*
 
+In addition to version information the dialog should report *Licensed Yes*
 
 To use the application follow the steps:
 
@@ -76,6 +86,7 @@ The menu option **Template...Options** provides options for configuring the temp
 ### Read
 
 Use the **Read** button or **Signature...Read file** to read a file into the signature area.
+
 >  File **Drag and Drop** is also supported.
 
 The file used for input can be one of the following types:
@@ -101,8 +112,8 @@ The API is documented in the set of doxygen files.
 
 #### License
 
-A suitable JWT license must be included in the application.
-A suitable capture device must be connected to use the application and validate the license (e.g. STU-430).
+A suitable JWT license must be included in the application. A suitable capture device must be
+connected to use the application and validate the license (e.g. STU-430).
 
 #### Threads
 
@@ -112,7 +123,6 @@ The time taken to enroll and verify signatures is significantly affected by the 
 
 ----
 ----
-
 
 
 

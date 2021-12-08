@@ -10,17 +10,17 @@ Moreover, the legal framework is not yet finalised, thus the service **MUST BE U
 
 ## Introduction
 
-The purpose of the GSV (General Signature Verification) SDK is to verify handwritten signatures.
+The purpose of the WISDK for verification (General Signature Verification) is to verify handwritten signatures.
 It uses and extends the existing verification tools, including the SSV (Static Signature Verification) SDK for processing scanned images, 
 and the DSV (Dynamic Signature Verification) SDK which handles signatures captured in Wacom's proprietary FSS (Forensic Signature Store) format.
-GSV supports all the functionality of the previous SDKs but handles both formats in a single component and allows individual signing variability to be measured by enrolling signature samples in a template.
+The SDK supports all the functionality of the previous SDKs but handles both formats in a single component and allows individual signing variability to be measured by enrolling signature samples in a template.
 
 
 ## Overview
 
-The main GSV component is the **SignatureEngine** which is a COM component responsible for enrolling and verifying signatures. The SignatureEngine does not store any data but processes signatures and updates a **Template** for each person to record their signing characteristics. It is the responsibility of the calling application to supply the user's template with each signature being verified, and to store the updated version afterwards.
+The main verification component is the **SignatureEngine** which is a COM component responsible for enrolling and verifying signatures. The SignatureEngine does not store any data but processes signatures and updates a **Template** for each person to record their signing characteristics. It is the responsibility of the calling application to supply the user's template with each signature being verified, and to store the updated version afterwards.
 
-The main features of the GSV SignatureEngine include the following:-
+The main features of the SDK's SignatureEngine include the following:-
 
 - A single template can handle either dynamic signatures supplied in FSS format or static signatures supplied as scanned graphical images, or both. In most implementations it is expected than one type or other will be used, but when both types are handled the SignatureEngine checks that the two sets of data are of the same signature. The SignatureEngine will also accept FSS data which is embedded steganographically in a graphical image.
 
@@ -45,7 +45,7 @@ The main features of the GSV SignatureEngine include the following:-
 ## SDK Delivery
 
 
-The GSV SDK includes the following:
+The verification SDK includes the following:
 
 | Name                      | Description |
 | ------------------------- | ----------- |

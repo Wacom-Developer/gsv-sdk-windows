@@ -10,7 +10,7 @@ Moreover, the legal framework is not yet finalised, thus the service **MUST BE U
 
 ## Introduction
 
-The purpose of the WISDK for verification (General Signature Verification) is to verify handwritten signatures.
+The purpose of the WISDK for verification is to verify handwritten signatures.
 It uses and extends the existing verification tools, including the SSV (Static Signature Verification) SDK for processing scanned images, 
 and the DSV (Dynamic Signature Verification) SDK which handles signatures captured in Wacom's proprietary FSS (Forensic Signature Store) format.
 The SDK supports all the functionality of the previous SDKs but handles both formats in a single component and allows individual signing variability to be measured by enrolling signature samples in a template.

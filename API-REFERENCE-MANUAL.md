@@ -1,4 +1,5 @@
 - [Introduction](#introduction)
+- [Data types summary](#data-types-summary)
 - [Data types](#data-types)
   - [ConfigurationOptions](#configurationoptions)
   - [ImageOptions](#imageoptions)
@@ -17,6 +18,20 @@
 ## Introduction 
 
 The **Wacom Ink SDK for verification**'s main component is the **SignatureEngine**. This document will cover the data types and methods that the component handles and possesses. 
+
+## Data types summary
+
+| Data types           |
+| -------------------- |
+| ConfigurationOptions |
+| ImageOptions         |
+| State                |
+| EnrollmentStatus     |
+| TemplateStatus       |
+| ComparisonType       |
+| InconsistencyType    |
+| VerificationResult   |
+
 
 ## Data types
 

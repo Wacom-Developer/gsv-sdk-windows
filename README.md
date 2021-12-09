@@ -1,11 +1,5 @@
 # Wacom Ink SDK for Verification - Windows
 
-**NOTICE:**
-
-All of the content provided in this repository is **classified as Wacom Confidential Material**, therefore the signed NON-DISCLOSURE AGREEMENT applies.
-Be aware that the **technology components are still under active development** with minimal QA testing, and **API interfaces and functionality could be changed or removed**.
-Moreover, the legal framework is not yet finalised, thus the service **MUST BE USED ONLY FOR ACADEMIC PURPOSE AND NOT WITH CUSTOMER DATA. WACOM DOES NOT STORE ANY DATA PERMANENTLY, ONLY TEMPORARILY FOR PROCESSING**.
-
 ---
 
 ## Introduction

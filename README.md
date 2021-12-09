@@ -66,6 +66,20 @@ The C# .NET sample application is supplied with source code and demonstrates the
 
 The **SignatureEngine** component handles the following data types:
 
+
+
+| Data types           |
+| -------------------- |
+| ConfigurationOptions |
+| ImageOptions         |
+| State                |
+| EnrollmentStatus     |
+| TemplateStatus       |
+| ComparisonType       |
+| InconsistencyType    |
+| VerificationResult   |
+
+
 **Data: DynamicSignature**
 
 A signature can be supplied as SigObj signature object, binary signature data or signature data as hex- or base-64 encoded text.
@@ -195,6 +209,12 @@ Templates are handled as BLOBs which are obfuscated and cannot be parsed except 
 ### SignatureEngine Component
 
 The **SignatureEngine** is a stateless component which is used to maintain a signature **template**. It has the following methods:
+
+| Methods           |
+| ----------------- |
+| CreateTemplate    |
+| GetTemplateStatus |
+| VerifySignature   |
 
 **Method: CreateTemplate**
 

@@ -21,6 +21,9 @@ The **Wacom Ink SDK for verification**'s main component is the **SignatureEngine
 
 ## Data types summary
 
+The SignatureEngine component handles the following data types:
+
+
 | Data types           |
 | -------------------- |
 | ConfigurationOptions |

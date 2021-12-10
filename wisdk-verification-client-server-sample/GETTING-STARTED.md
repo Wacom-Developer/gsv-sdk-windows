@@ -101,7 +101,16 @@ These are the 3 primary files roles that interact. Additionally, GsvSignatureEng
 
 After obtaining a verification license, insert it into GSV-Server-Client\GsvServer\appsettings.json. A temporary evaluation license can be found in the Verification SDK for Windows start guide.
 
-After obtaining a signature capture license, insert it into WacomInkVerificationSample\SampleLicense.txt. 
+After obtaining a signature capture license, insert it into WacomInkVerificationSample\Main.cs here:
+
+```
+ try
+            {
+                _mLicense = "<Insert your signature capture license here and delete the line below>";
+                MessageBox.Show("License string not inserted. Please insert the license within Main.cs");
+            }
+           
+```
 
 # How to run
 

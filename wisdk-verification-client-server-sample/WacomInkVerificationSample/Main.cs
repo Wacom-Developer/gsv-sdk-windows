@@ -86,7 +86,8 @@ namespace WacomInkVerificationSample
             //       Please contact Wacom to obtain a full production license for use in your own code.
             try
             {
-                _mLicense = File.ReadAllText("SampleLicense.txt").Trim();
+                _mLicense = "<Insert your signature capture license here and delete the line below>";
+                MessageBox.Show("License string not inserted. Please insert the license within Main.cs");
             }
             catch { }
 

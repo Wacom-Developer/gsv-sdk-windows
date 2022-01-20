@@ -1,32 +1,6 @@
 # Wacom Ink SDK for verification Sample Server
 
-This repository contains the **Wacom Ink SDK for verification** sample server and client applications. Before you build the server you should edit the `GSV-Server-Client/Api/gsv_options.json` file and update the `TemplateFolder` to point to a data directory on your server, e.g.:
-
-```
-{
-  "TemplateFolder": "C:\\WacomVerification",
-  "ConfigurationOptions": {
-    "TemplateSize": 6,
-    "EnrollmentScore": 0.2,
-    "UpdateInterval": 30,
-    "SignatureStyle": 0,
-    "IgnoreDateTime": false,
-    "ForceEnrollment": false
-  },
-  "ImageOptions": {
-    "RemoveSpeckle": false,
-    "RemoveFold": false,
-    "RemoveBox": false,
-    "RemoveSigningLine": false,
-    "MinSigningLineLength": 0.0,
-    "MaxSigningLineThickness": 0.0,
-    "AdjustContrast": false,
-    "Contrast": 0,
-    "SetImageResolution": false,
-    "ImageResolution": 0
-  }
-}
-```
+This repository contains the **Wacom Ink SDK for verification** sample server and client applications. 
 
 ## Project Layout
 

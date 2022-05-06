@@ -197,6 +197,14 @@ In either case:
 | (IN) DynamicSignature	|  Signature	|Either:<br/>- FSS data captured using any of the Signature SDKs<br/>- The name of an image file containing the scanned image of an ink-on-paper signature |
 | (OUT) VerificationResult |	Result	| Returns the verification score, verification type and failure type, the complexity of the signature being verified and a summary of the template status. |
 
+## Feedback / Support
+
+If you experience issues with the technology components, please file a ticket in our Developer Support Portal:
+
+- [Developer Support Portal](https://developer.wacom.com/developer-dashboard/support)
+
+## Technology Usage
+**No Commercial Use**. NOTWITHSTANDING ANYTHING TO THE CONTRARY, THIS AGREEMENT DOES NOT CONVEY ANY LICENSE TO USE THE EVALUATION MATERIALS IN PRODUCTION, OR TO DISTRIBUTE THE EVALUATION MATERIALS TO ANY THIRD PARTY. THE PARTNER ARE REQUIRED TO EXECUTE A SEPARATE LICENSE AGREEMENT WITH WACOM BEFORE MANUFACTURING OR DISTRIBUTING THE EVALUATION MATERIALS OR ANY PRODUCTS THAT CONTAIN THE EVALUATION MATERIALS. The Partner hereby acknowledge and agree that: (i) any use by The Partner of the Evaluation Materials in production, or any other distribution of the Evaluation Materials is a material breach of this Agreement; and (ii) any such unauthorized use or distribution will be at The Partner sole risk. No such unauthorized use or distribution shall impose any liability on Wacom, or any of its licensors, whether by implication, by estoppel, through course of dealing, or otherwise. The Partner hereby agree to indemnify Wacom, its affiliates and licensors against any and all claims, losses, and damages based on The Partner use or distribution of the Evaluation Materials in breach of this Agreement.
 
 
 ---

@@ -1,11 +1,15 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.9
+## Version 1.0.10
 
 ## History
 
+### 1.0.10 3 February 2022
+  * Added Java wrapper for existing SDK
+  * Fixed issues with Java Doxygen
+
 ### 1.0.9   8 December 2021
-  * Initial release.
+  * Improved the classifier to give better error rates
 
 ### 1.0.8   19 October 2021
   * Improved the classifier to give better results for short signatures

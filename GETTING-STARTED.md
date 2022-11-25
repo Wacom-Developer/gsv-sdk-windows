@@ -3,30 +3,35 @@
 ## Development Environment
 
 The sample application is supplied for Windows 7 and above to demonstrate using the SDK.
+Microsoft Visual Studio 2019 is required to build the application.
 
 
 ## Install the SDK
 
-Run the MSI installer included in the SDK folder to install the necessary Wacom signature and Verification components.
+Run the MSI installer included in the SDK folder to install the necessary Wacom signature and
+Verification components. Choose the -x86 or -x64 installer for 32-bit or 64-bit operation
+respectively.
 
 ## License the application
-A license is required to run the Verification application.    
-A custom user license is supplied separately via email from *signature-support@wacom.com*
+A license is required to run the Verification application.
 
-The license is supplied as a JWT text string and must be included in the application.
-In the Verification sample code insert the string in the file main.cs:
+A custom user license is supplied separately via email from *signature-support@wacom.eu* upon receipt of your Wacom ID.
+To obtain a Wacom ID please register at https://developer.wacom.com. Your Wacom ID is the email address which you use for the registration.
+
+The license is supplied as a JWT text string and must be included in the application. In the
+Verification sample code insert the string in the file main.cs:
+
 ```
 private const string mLicense = "<<insert license here>>";
 ```
 
 The license is subsequently used to license both signature capture and the verification engine:
+
 ```
-  capture.Licence = mLicense;
-  
-  sigEngine.License = mLicense;
-``` 
+capture.Licence = mLicense;
 
-
+sigEngine.License = mLicense;
+```
 ----
 ## Sample Code
 
@@ -36,16 +41,17 @@ The following steps describe how to build and run the application:
 
 * Ensure that .NET Framework 4.7.2 is installed for a successful build.
 * Open the sample solution **WacomInkVerificationSample.sln** in Visual Studio 2019.
-* set the project to build as **x86**
+* set the project to build as **x86** if the -x86 SDK was installed
+* set the project to build as **x64** if the -x64 SDK was installed
 * build and run the application
 
 The application displays its main dialog:
 
 ![Sample App](media/SampleApp.png)
 
-Check that the application has been successfully licensed using *Help...About*  
-In addition to version information the dialog should report *Licensed Yes*
+Check that the application has been successfully licensed using *Help...About*
 
+In addition to version information the dialog should report *Licensed Yes*
 
 To use the application follow the steps:
 
@@ -60,7 +66,7 @@ At any time the template status can be viewed using the menu option **Template..
 
 ![Template Status](media/TemplateStatus.png)
 
-Once the sufficient number of signatures have been enrolled in a template, comparison results can be obtained:
+Once a sufficient number of signatures have been enrolled in a template, comparison results can be obtained:
 
 ![Verification result](media/VerifyResult.png)
 
@@ -73,6 +79,7 @@ The menu option **Template...Options** provides options for configuring the temp
 ### Read
 
 Use the **Read** button or **Signature...Read file** to read a file into the signature area.
+
 >  File **Drag and Drop** is also supported.
 
 The file used for input can be one of the following types:
@@ -83,7 +90,9 @@ The file used for input can be one of the following types:
 
 ### Verify
 
-Depending on the status of the template the signature captured or read into the signature area is either used to enroll or verify the signature.
+Depending on the status of the template, the signature captured or read into the signature area is either used to enroll or verify the signature.
+
+NB: it's important to have a Wacom device plugged in during verification.
 
 ### SDK for Verification API
 
@@ -98,7 +107,8 @@ The API is documented in the set of doxygen files.
 
 #### License
 
-A suitable JWT license must be included in the application.
+A suitable JWT license must be included in the application. A suitable capture device must be
+connected to use the application and validate the license (e.g. STU-430).
 
 #### Threads
 
@@ -108,7 +118,6 @@ The time taken to enroll and verify signatures is significantly affected by the 
 
 ----
 ----
-
 
 
 

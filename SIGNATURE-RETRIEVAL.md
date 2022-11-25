@@ -48,7 +48,7 @@ To create a signature Object from ISO format import the data, for example:
 sigObj.ImportIso(SignatureISO, XML, additionalImportIsoData);
 ```
 
-Once the signature object has been created it can be used in the GSV API.
+Once the signature object has been created it can be used in the Wacom Ink SDK for verification API.
 
 To help with development, the MiniScope utility which uses these methods will display signature information.  
 MiniScope is available here: [MiniScope Installer](https://developer-docs.wacom.com/sdk-for-signature/docs/en/mini-scope)

@@ -446,7 +446,8 @@ namespace WacomVerificationSample
             {
                 var license = new WacomLicenceLib.LicenceClass();
 
-                if (license.SetLicence(mLicense).Result == 0)
+                if (license.SetLicence(mLicense).Result == 0
+                    && license.Check(110).Result == (int)WacomLicenceLib.CheckStatus.Allowed)
                 {
                     return true;
                 }

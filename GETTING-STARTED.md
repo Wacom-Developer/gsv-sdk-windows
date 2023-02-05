@@ -2,7 +2,7 @@
 
 ## Development Environment
 
-The sample application is supplied for Windows 7 and above to demonstrate using the SDK.
+The sample application is supplied for Windows 10 and above to demonstrate using the SDK.
 Microsoft Visual Studio 2019 is required to build the application.
 
 

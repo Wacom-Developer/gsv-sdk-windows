@@ -6,7 +6,7 @@ This repository contains the GSV sample server and client applications.
 
 # Project Layout
 
-Before you build the sample, you will need to install the GSV SDK on the build machine. After the engine is installed, open the project solution file under ```GSV-Server-Client/GSV-Server-Client.sln.```
+Before you build the sample, you will need to install the GSV SDK on the build machine. After the engine is installed, open the project solution file under ```GsvClientServerSample.sln.```
 
 The solution consists of 2 client-side components and 2 server-side components
 
@@ -91,11 +91,13 @@ After obtaining a signature capture license, insert it into WacomInkVerification
 
 ## Building the sample
 
-After setting the configuration files to match your system layout, select the API project and select ```Debug->Start without debugging``` to start the server component on the system. Once this has built, the server will run and the API documentation can be viewed using the local swagger implementation:
+After setting the configuration files to match your system layout, in Visual Studio, select ```Debug->Start without debugging``` to start the server component on the system. Once this has built, the server will run. Relevant documentation can be viewed using the local swagger implementation:
 
 https://localhost:5001/swagger/index.html
 
-You can now build the client app by selecting the WacomInkVerificationSample target in the solution and selecting the debug option. This will allow you to create a new template, capture or load signatures and send the verification requests to the local running GSV server.
+You can now build the client app by selecting the WacomInkVerificationSample target in the solution, selecting ```Debug->Start new instance```. 
+
+This will allow you to create a new template, capture or load signatures and send the verification requests to the local running GSV server.
 
 All com calls were replaced with http calls. All the interesting work is now being handled over http over a separate server. When we begun it it's local but we could throw it on a server and work on it remotely. 
 

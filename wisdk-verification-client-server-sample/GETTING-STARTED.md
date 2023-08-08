@@ -91,7 +91,11 @@ After obtaining a signature capture license, insert it into WacomInkVerification
 
 ## Building the sample
 
-After setting the configuration files to match your system layout, in Visual Studio, select ```Debug->Start without debugging``` to start the server component on the system. Once this has built, the server will run. Relevant documentation can be viewed using the local swagger implementation:
+After setting the configuration files to match your system layout, in Visual Studio, select ```Debug->Start without debugging``` to start the server component on the system. 
+
+![Debug](media/debug.png)
+
+Once this has built, the server will run. Relevant documentation can be viewed using the local swagger implementation:
 
 https://localhost:5001/swagger/index.html
 

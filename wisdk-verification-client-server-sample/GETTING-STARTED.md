@@ -101,6 +101,8 @@ https://localhost:5001/swagger/index.html
 
 You can now build the client app by selecting the WacomInkVerificationSample target in the solution, selecting ```Debug->Start new instance```. 
 
+![New instance](media/new-instance.png)
+
 This will allow you to create a new template, capture or load signatures and send the verification requests to the local running GSV server.
 
 All com calls were replaced with http calls. All the interesting work is now being handled over http over a separate server. When we begun it it's local but we could throw it on a server and work on it remotely. 

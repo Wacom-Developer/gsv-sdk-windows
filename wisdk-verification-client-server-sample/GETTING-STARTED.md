@@ -91,7 +91,13 @@ After obtaining a signature capture license, insert it into WacomInkVerification
 
 ## Building the sample
 
-After setting the configuration files to match your system layout, in Visual Studio, select ```Debug->Start without debugging``` to start the server component on the system. 
+In Visual Studio, the `SqliteDataSource` path in `appsettings.json` will set where the signature templates are stored. By default, this will be: 
+
+```
+  "SqliteDataSource": "Data Source=C:\\WacomVerification\\templates.db",
+```
+
+Select ```Debug->Start without debugging``` to start the server component on the system. 
 
 ![Debug](media/debug.png)
 

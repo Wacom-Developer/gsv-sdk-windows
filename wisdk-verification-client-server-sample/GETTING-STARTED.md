@@ -74,7 +74,10 @@ These are the 3 primary files roles that interact. Additionally, GsvSignatureEng
 
 # How to license 
 
-After obtaining a verification license, insert it into GSV-Server-Client\GsvServer\appsettings.json. A temporary evaluation license can be found in the Verification SDK for Windows start guide.
+After obtaining a verification license, insert it into GSV-Server-Client\GsvServer\appsettings.json. 
+
+A custom user license is supplied separately via email from *enterprise-support@wacom.com* upon receipt of your Wacom ID.
+To obtain a Wacom ID please register at https://developer.wacom.com. Your Wacom ID is the email address which you use for the registration.
 
 After obtaining a signature capture license, insert it into WacomInkVerificationSample\Main.cs here:
 

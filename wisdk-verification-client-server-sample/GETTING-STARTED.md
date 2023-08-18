@@ -110,6 +110,8 @@ Once this has built, the server will run. Relevant documentation can be viewed u
 
 https://localhost:5001/swagger/index.html
 
+Additional documentation can also be viewed in `%PROGRAMFILES%\Wacom\Signature Verification` after running the SDK installer. 
+
 You can now build the client app by selecting the WacomInkVerificationSample target in the solution, selecting ```Debug->Start new instance```. 
 
 ![New instance](media/new-instance.png)

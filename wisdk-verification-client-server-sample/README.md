@@ -20,9 +20,11 @@ There is also a .NET core API that provides the REST interface of the server.
 
 ## Building the sample
 
-After setting the configuration files to match your system layout, select the GsvServer project and select  `Debug->Start without debugging`  to start the server component on the system. Once this has built, the server will run and the API documentation can be viewed using the local swagger implementation:
+After setting the configuration files to match your system layout, select the GsvServer project and select  `Debug->Start without debugging`  to start the server component on the system. Once this has built, the server will run and the API documentation can be viewed using the local swagger implementation. By default, the URL will be: 
 
 https://localhost:44317/swagger/index.html
+
+**NB:** the port number can be adjusted within *launchSettings.json* and *Program.cs*.
 
 You can now build the client app by selecting the `WacomInkVerificationSample` target in the solution and selecting the debug option. This will allow you to create a new template, capture or load signatures and send the verification requests to the local running server.
 

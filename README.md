@@ -58,4 +58,26 @@ The C# .NET sample application is supplied with source code and demonstrates the
 |  Verify signature from file    | The app allows the user to drag and drop signature files which are then verified using the currently selected template and the results displayed. Dynamic signatures may be in .FSS or .TXT (Base-64 encoded) form. Signature image files can be in any common format, including .PNG, .TIF, .BMP, .JPG etc.  Images containing stegangraphically embedded data will be processed as FSS data. |
 |  Capture and verify signature  |  A button is provided to capture a signature using the Signature SDK and verify it against the currently selected template  |
 
+# Additional resources 
+
+## Sample Code
+For further samples check Wacom's Developer additional samples, see [https://github.com/Wacom-Developer](https://github.com/Wacom-Developer)
+
+## Documentation
+For further details on using the SDK see [Wacom Ink SDK for verification documentation](http://developer-docs.wacom.com/sdk-for-verification/) 
+
+## Support
+If you experience issues with the technology components, please see related [FAQs](https://developer-support.wacom.com/hc/en-us)
+
+For further support file a ticket in our **Developer Support Portal** described here: [Request Support](https://developer-support.wacom.com/hc/en-us/requests/new)
+
+## Developer Community 
+Join our developer community:
+
+- [LinkedIn - Wacom for Developers](https://www.linkedin.com/company/wacom-for-developers/)
+- [Twitter - Wacom for Developers](https://twitter.com/Wacomdevelopers)
+
+## License 
+This sample code is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
 ---

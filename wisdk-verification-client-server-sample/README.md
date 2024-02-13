@@ -28,6 +28,28 @@ https://localhost:44317/swagger/index.html
 
 You can now build the client app by selecting the `WacomInkVerificationSample` target in the solution and selecting the debug option. This will allow you to create a new template, capture or load signatures and send the verification requests to the local running server.
 
+# Additional resources 
 
+## Sample Code
+For further samples check Wacom's Developer additional samples, see [https://github.com/Wacom-Developer](https://github.com/Wacom-Developer)
+
+## Documentation
+For further details on using the SDK see [Wacom Ink SDK for verification documentation](http://developer-docs.wacom.com/sdk-for-verification/) 
+
+## Support
+If you experience issues with the technology components, please see related [FAQs](https://developer-support.wacom.com/hc/en-us)
+
+For further support file a ticket in our **Developer Support Portal** described here: [Request Support](https://developer-support.wacom.com/hc/en-us/requests/new)
+
+## Developer Community 
+Join our developer community:
+
+- [LinkedIn - Wacom for Developers](https://www.linkedin.com/company/wacom-for-developers/)
+- [Twitter - Wacom for Developers](https://twitter.com/Wacomdevelopers)
+
+## License 
+This sample code is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+---
 
     

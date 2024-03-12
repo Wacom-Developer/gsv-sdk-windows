@@ -306,7 +306,7 @@
             this.buttonReason.Name = "buttonReason";
             this.buttonReason.Size = new System.Drawing.Size(95, 42);
             this.buttonReason.TabIndex = 19;
-            this.buttonReason.Text = "Reason";
+            this.buttonReason.Text = "OK";
             this.buttonReason.UseVisualStyleBackColor = true;
             this.buttonReason.Click += new System.EventHandler(this.buttonReason_Click);
             // 

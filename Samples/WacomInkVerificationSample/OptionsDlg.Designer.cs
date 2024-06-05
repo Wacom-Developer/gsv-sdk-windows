@@ -31,9 +31,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxSigStyle = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkForceEnroll = new System.Windows.Forms.CheckBox();
-            this.chkIgnoreDateTime = new System.Windows.Forms.CheckBox();
             this.numUpdateInterval = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.numEnrollScore = new System.Windows.Forms.NumericUpDown();
@@ -61,7 +58,6 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpdateInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEnrollScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTemplateSize)).BeginInit();
@@ -77,7 +73,6 @@
             // 
             this.groupBox1.Controls.Add(this.cbxSigStyle);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.numUpdateInterval);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.numEnrollScore);
@@ -107,37 +102,6 @@
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Signature Style:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.chkForceEnroll);
-            this.groupBox2.Controls.Add(this.chkIgnoreDateTime);
-            this.groupBox2.Location = new System.Drawing.Point(171, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(123, 74);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Testing only";
-            // 
-            // chkForceEnroll
-            // 
-            this.chkForceEnroll.AutoSize = true;
-            this.chkForceEnroll.Location = new System.Drawing.Point(13, 42);
-            this.chkForceEnroll.Name = "chkForceEnroll";
-            this.chkForceEnroll.Size = new System.Drawing.Size(104, 17);
-            this.chkForceEnroll.TabIndex = 1;
-            this.chkForceEnroll.Text = "Force enrollment";
-            this.chkForceEnroll.UseVisualStyleBackColor = true;
-            // 
-            // chkIgnoreDateTime
-            // 
-            this.chkIgnoreDateTime.AutoSize = true;
-            this.chkIgnoreDateTime.Location = new System.Drawing.Point(13, 19);
-            this.chkIgnoreDateTime.Name = "chkIgnoreDateTime";
-            this.chkIgnoreDateTime.Size = new System.Drawing.Size(104, 17);
-            this.chkIgnoreDateTime.TabIndex = 0;
-            this.chkIgnoreDateTime.Text = "Ignore date/time";
-            this.chkIgnoreDateTime.UseVisualStyleBackColor = true;
             // 
             // numUpdateInterval
             // 
@@ -471,8 +435,6 @@
             this.Text = "Options";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpdateInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEnrollScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTemplateSize)).EndInit();
@@ -495,9 +457,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numTemplateSize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox chkForceEnroll;
-        private System.Windows.Forms.CheckBox chkIgnoreDateTime;
         private System.Windows.Forms.NumericUpDown numUpdateInterval;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;

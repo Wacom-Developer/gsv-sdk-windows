@@ -38,9 +38,6 @@ namespace WacomVerificationSample
             cbxSigStyle.ValueMember = "Value";
             cbxSigStyle.SelectedValue = options.ConfigurationOptions.SignatureStyle;
 
-            chkIgnoreDateTime.Checked = options.ConfigurationOptions.IgnoreDateTime;
-            chkForceEnroll.Checked = options.ConfigurationOptions.ForceEnrollment;
-
             chkRemoveSpeckle.Checked = options.ImageOptions.RemoveSpeckle;
             chkRemoveFold.Checked = options.ImageOptions.RemoveFold;
             chkRemoveBox.Checked = options.ImageOptions.RemoveBox;
@@ -80,8 +77,6 @@ namespace WacomVerificationSample
             options.ConfigurationOptions.EnrollmentScore = (float)numEnrollScore.Value;
             options.ConfigurationOptions.UpdateInterval = (ushort)numUpdateInterval.Value;
             options.ConfigurationOptions.SignatureStyle = (WacomVerification.SignatureStyle)cbxSigStyle.SelectedValue;
-            options.ConfigurationOptions.IgnoreDateTime = chkIgnoreDateTime.Checked;
-            options.ConfigurationOptions.ForceEnrollment = chkForceEnroll.Checked;
 
             options.ImageOptions.RemoveSpeckle = chkRemoveSpeckle.Checked;
             options.ImageOptions.RemoveFold = chkRemoveFold.Checked;

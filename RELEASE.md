@@ -1,8 +1,12 @@
 # Wacom Ink SDK for Verification - Windows
 
-## Version 1.0.10
+## Version 1.1
 
 ## History
+
+### 1.1.0 15 January 2024
+  * Added normalization support
+
 
 ### 1.0.10 3 February 2022
   * Added Java wrapper for existing SDK

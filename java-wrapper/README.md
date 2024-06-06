@@ -1,7 +1,5 @@
 # Wacom Ink SDK for Verification Java wrapper - Windows
 
-Version 1.0.10
-
 ## Requirements
 
 The sample application is supplied for Windows 10 and above to demonstrate using the SDK.

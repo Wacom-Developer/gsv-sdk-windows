@@ -1,0 +1,7 @@
+{
+<<<<<<< Updated upstream
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.defaultSolution": "wisdk-verification-client-server-sample/GsvClientServerSample.sln"
+=======
+>>>>>>> Stashed changes
+}

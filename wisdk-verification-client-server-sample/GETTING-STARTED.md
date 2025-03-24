@@ -107,7 +107,7 @@ After obtaining a signature capture license, insert it into `WacomInkVerificatio
 
 ## Building the sample
 
-In Visual Studio, the `SqliteDataSource` path in `appsettings.json` will set where the signature templates are stored. By default, this will be: 
+In Visual Studio, ensure the `SqliteDataSource` path in `appsettings.json` will set where the signature templates are stored. By default, this will be: 
 
 ```
   "SqliteDataSource": "Data Source=C:\\WacomVerification\\templates.db",
